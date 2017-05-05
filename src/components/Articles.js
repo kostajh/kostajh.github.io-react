@@ -1,27 +1,26 @@
 import React from 'react';
-
-const articleImgStyle = {
-  backgroundImage: 'url(' + 'http://mrmrs.io/images/0006.jpg' + ')'
-};
-
+var api = require('../utils/api.js');
 
 function ArticleGrid (props) {
 
-  const backgroundImageStyle = {
-    backgroundImage: 'url({this.props.articleImage})'
-  };
   return (
     <section className="cf w-100 pa2-ns">
       {props.articles.map(function (article, index) {
+        const img = article.fields.image;
+        const backgroundImageStyle = {
+          backgroundImage: 'url(' + img.fields.file.url + ')'
+        };
         return (
-          <article className="fl w-100 w-50-m w-25-ns pa2-ns">
+          <article key={article.sys.id} className="fl w-100 w-50-m w-25-ns pa2-ns">
             <div className="aspect-ratio aspect-ratio--1x1">
-              <img style="{backgroundImageStyle}"
+              <img style={backgroundImageStyle}
+                   alt={img.description}
                    className="db bg-center cover aspect-ratio--object" />
             </div>
             <a href="#0" className="ph2 ph0-ns pb3 link db">
-              <h3 className="f5 f4-ns mb0 black-90">Title of piece</h3>
-              <h3 className="f6 f5 fw4 mt2 black-60">Subtitle of piece</h3>
+              <h3 className="f5 f4-ns mb0 black-90">{article.fields.title}</h3>
+              <h3 className="f6 f5 fw4 mt2 black-60">{article.fields.summary}</h3>
+              <h3 className="f6 lh-copy">{article.sys.createdAt}</h3>
             </a>
           </article>
         );
@@ -39,7 +38,14 @@ class Articles extends React.Component {
   }
 
   componentDidMount() {
-    // fetch articles
+    api.getArticles()
+      .then(function(articles) {
+        this.setState(function () {
+          return {
+            articles: articles
+          };
+        });
+      }.bind(this));
   }
 
   render() {
