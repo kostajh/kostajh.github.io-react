@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => (
   <footer className="pv4 ph3 ph5-m ph6-l mid-gray">
-    <small className="f6 db tc">Contact at <b className="ttu">[first-name]@fastmail.com</b></small>
+    <small className="f6 db tc"><a className="dib ph2 link mid-gray dim" href="mailto:kosta@fastmail.com">kosta@fastmail.com</a></small>
     <div className="tc mt3">
       <a href="https://drupal.org/u/kostajh"    title="Drupal.org" className="f6 dib ph2 link mid-gray dim">Drupal.org</a>
       <a href="https://github.com/kostajh"  title="GitHub" className="f6 dib ph2 link mid-gray dim">GitHub</a>
