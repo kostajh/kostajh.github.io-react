@@ -7,7 +7,14 @@
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-router-dom": "^4.1.1",
-    "tachyons": "^4.7.1"
+    "tachyons": "^4.7.1",
+    "tachyons-display": "^5.0.4",
+    "tachyons-font-weight": "^5.0.4",
+    "tachyons-hovers": "^2.5.1",
+    "tachyons-links": "^3.0.10",
+    "tachyons-skins": "^4.0.3",
+    "tachyons-spacing": "^6.0.4",
+    "tachyons-type-scale": "^6.0.4"
   },
   "devDependencies": {
     "react-scripts": "0.9.5",
