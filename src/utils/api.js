@@ -6,7 +6,10 @@ var client = createClient({
 });
 
 function getArticles () {
-  return client.getEntries()
+  return client.getEntries({
+    content_type: 'post',
+    order: '-fields.publishDate'
+  })
     .then(function(response) {
       console.log(response);
       return response.items;
