@@ -1,11 +1,13 @@
 import React from 'react';
 var api = require('../utils/api.js');
 var ReactMarkdown = require('react-markdown');
+var formatDate = require('../utils/date.js');
 
 function RenderPost (props) {
 
   const post = props.post;
   const postBody = post.fields.body.split("\n");
+  const formattedDate = formatDate.RenderDate(post.fields.publishDate);
   return (
    <article className="cf ph3 ph5-ns pv5">
       <header className="fn fl-ns w-50-ns pr4-ns">
@@ -15,7 +17,7 @@ function RenderPost (props) {
         <h2 className="f3 mid-gray lh-title">
           {post.fields.summary}
         </h2>
-        <time className="f6 ttu tracked gray">{post.fields.publishDate}</time>
+        <time className="f6 ttu tracked gray">{formattedDate}</time>
       </header>
       <div className="fn fl-ns w-50-ns">
         <div>
