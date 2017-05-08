@@ -18,6 +18,9 @@ function RenderPost (props) {
         <time className="f6 ttu tracked gray">{post.fields.publishDate}</time>
       </header>
       <div className="fn fl-ns w-50-ns">
+        <div>
+          <img src={post.fields.image.fields.file.url} />
+        </div>
         {postBody.map(function (paragraph, index) {
           if (index === 0) {
             return (<p key={index} className="f5 lh-copy measure mt0-ns">

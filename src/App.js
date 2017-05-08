@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Header from './components/Header.js';
 import Footer from './components/Footer.js';
-import Nav from './components/Nav.js';
 import Articles from './components/Articles.js';
 import Post from './components/Post.js';
 import About from './components/About.js';
