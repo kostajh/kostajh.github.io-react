@@ -16,7 +16,6 @@ class App extends Component {
     return (
       <Router>
         <div className="App fl w-100 pa2">
-          <Nav />
           <Header />
           <Switch>
             <Route exact path='/' component={Articles} />

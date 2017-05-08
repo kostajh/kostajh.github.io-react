@@ -1,5 +1,6 @@
 import React from 'react';
 var api = require('../utils/api.js');
+var ReactMarkdown = require('react-markdown');
 
 function RenderPost (props) {
 
@@ -20,11 +21,11 @@ function RenderPost (props) {
         {postBody.map(function (paragraph, index) {
           if (index === 0) {
             return (<p key={index} className="f5 lh-copy measure mt0-ns">
-                    {paragraph}
+                    <ReactMarkdown source={paragraph} />
                     </p>);
           }
           return (<p key={index} className="f5 lh-copy measure">
-                  {paragraph}
+                  <ReactMarkdown source={paragraph} />
                   </p>);
         })}
       </div>
