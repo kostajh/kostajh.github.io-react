@@ -8,6 +8,7 @@ var client = createClient({
 function getContent (constraints) {
   return client.getEntries(constraints)
     .then(function (response) {
+      console.log(response);
       return response.items;
     })
     .catch(console.error);
@@ -16,7 +17,8 @@ function getContent (constraints) {
 function getArticles () {
   return getContent({
     content_type: 'post',
-    order: '-fields.publishDate'
+    order: "-fields.publishDate",
+    select: "sys.id,fields.title,fields.slug"
   });
 }
 
