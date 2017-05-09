@@ -8,6 +8,8 @@ function RenderPost (props) {
   const post = props.post;
   const postBody = post.fields.body.split("\n");
   const formattedDate = formatDate.RenderDate(post.fields.publishDate);
+  const image = post.fields.image.fields.file.url;
+  const imageDescription = post.fields.image.fields.description;
   return (
    <article className="cf ph3 ph5-ns pv5">
       <header className="fn fl-ns w-50-ns pr4-ns">
@@ -21,7 +23,7 @@ function RenderPost (props) {
       </header>
       <div className="fn fl-ns w-50-ns">
         <div>
-          <img src={post.fields.image.fields.file.url} />
+          <img src={image} alt={imageDescription} />
         </div>
         {postBody.map(function (paragraph, index) {
           if (index === 0) {

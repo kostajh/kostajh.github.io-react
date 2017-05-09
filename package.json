@@ -11,6 +11,7 @@
     "react-router-dom": "^4.1.1",
     "tachyons": "^4.7.1",
     "tachyons-background-size": "^5.0.5",
+    "tachyons-border-colors": "^4.2.3",
     "tachyons-border-widths": "^3.0.4",
     "tachyons-borders": "^3.0.4",
     "tachyons-clears": "^3.0.4",
@@ -24,6 +25,7 @@
     "tachyons-letter-spacing": "^3.0.4",
     "tachyons-line-height": "^3.0.6",
     "tachyons-links": "^3.0.10",
+    "tachyons-max-widths": "^4.0.4",
     "tachyons-skins": "^4.0.3",
     "tachyons-spacing": "^6.0.4",
     "tachyons-text-align": "^3.0.4",
@@ -36,7 +38,9 @@
   },
   "devDependencies": {
     "react-scripts": "0.9.5",
-    "tachyons-cli": "^1.0.11"
+    "serve": "^5.1.5",
+    "tachyons-cli": "^1.0.11",
+    "webpack": "^2.5.1"
   },
   "scripts": {
     "start": "react-scripts start",
