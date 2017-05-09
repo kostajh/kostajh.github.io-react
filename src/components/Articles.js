@@ -14,8 +14,8 @@ function ArticleGrid (props) {
             count--;
             return (
               <div key={article.sys.id}>
-                <NavLink to={articleRoute} className="f4 fw6 db black link hover-dark-blue">
-                  <dt key={article.sys.id} className="f5 b">
+                <NavLink to={articleRoute} className="f5 fw6 db black link hover-dark-blue">
+                  <dt key={article.sys.id}>
                     {count}. {article.fields.title}
                   </dt>
                 </NavLink>
