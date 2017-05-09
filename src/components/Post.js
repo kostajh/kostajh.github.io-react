@@ -5,6 +5,7 @@ var formatDate = require('../utils/date.js');
 
 function RenderPost (props) {
   const post = props.post;
+  console.log(props);
   const postBody = post.fields.body.split("\n");
   const formattedDate = formatDate.RenderDate(post.fields.publishDate);
   const image = post.fields.image.fields.file.url;
@@ -53,7 +54,7 @@ class Post extends React.Component {
       .then(function(post) {
         this.setState(function () {
           return {
-            post: post
+            post: post[0]
           };
         });
       }.bind(this));
