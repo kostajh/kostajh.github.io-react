@@ -5,26 +5,26 @@ var client = createClient({
   accessToken: 'ae3f9647e19e14af918a34bbbeb2bce15ebe9f3e8e0bc195a3a5f3c09414f61b'
 });
 
-function getArticles () {
-  return client.getEntries({
-    content_type: 'post',
-    order: '-fields.publishDate'
-  })
-    .then(function(response) {
+function getContent (constraints) {
+  return client.getEntries(constraints)
+    .then(function (response) {
       return response.items;
     })
     .catch(console.error);
 }
 
+function getArticles () {
+  return getContent({
+    content_type: 'post',
+    order: '-fields.publishDate'
+  });
+}
+
 function getPostBySlug (slug) {
-  return client.getEntries({
+  return getContent({
     content_type: 'post',
     'fields.slug': slug.substring(6)
-  })
-    .then(function (response) {
-      return response.items[0];
-    })
-    .catch(console.error);
+  });
 }
 
 module.exports = {
@@ -33,5 +33,8 @@ module.exports = {
   },
   getPostBySlug: function (slug) {
     return getPostBySlug(slug);
+  },
+  getContent: function (constraints) {
+    return getContent(constraints);
   }
 };

@@ -4,7 +4,6 @@ var ReactMarkdown = require('react-markdown');
 var formatDate = require('../utils/date.js');
 
 function RenderPost (props) {
-
   const post = props.post;
   const postBody = post.fields.body.split("\n");
   const formattedDate = formatDate.RenderDate(post.fields.publishDate);

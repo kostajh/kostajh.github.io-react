@@ -5,7 +5,7 @@ function About () {
     <div>
       <p>Hi</p>
     </div>
-  )
+  );
 }
 
 module.exports = About;
