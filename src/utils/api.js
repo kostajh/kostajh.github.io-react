@@ -11,7 +11,6 @@ function getArticles () {
     order: '-fields.publishDate'
   })
     .then(function(response) {
-      console.log(response);
       return response.items;
     })
     .catch(console.error);

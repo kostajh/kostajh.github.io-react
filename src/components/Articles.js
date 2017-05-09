@@ -9,7 +9,7 @@ function ArticleGrid (props) {
       {props.articles.map(function (article, index) {
         const img = article.fields.image;
         const backgroundImageStyle = {
-          backgroundImage: 'url(' + img.fields.file.url + ')'
+          backgroundImage: 'url(' + img.fields.file.url + '?q=70&fl=progressive&w=325&h=325)'
         };
         const articleRoute = '/post/' + article.fields.slug;
         const formattedDate = formatDate.RenderDate(article.fields.publishDate);

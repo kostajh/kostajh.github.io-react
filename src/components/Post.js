@@ -61,7 +61,6 @@ class Post extends React.Component {
   }
 
   render() {
-    console.log(this.state.post);
     return(
       <div>
         {!this.state.post
