@@ -1,7 +1,6 @@
 import React from 'react';
 var NavLink = require('react-router-dom').NavLink;
 var api = require('../utils/api.js');
-var formatDate = require('../utils/date.js');
 
 function ArticleGrid (props) {
     var count = props.articles.length;
@@ -10,7 +9,6 @@ function ArticleGrid (props) {
         <dl className="lh-title pa4 mt0">
           {props.articles.map(function (article, index) {
             const articleRoute = '/post/' + article.fields.slug;
-            const formattedDate = formatDate.RenderDate(article.fields.publishDate);
             count--;
             return (
               <div key={article.sys.id}>
