@@ -8,7 +8,6 @@ var client = createClient({
 function getContent (constraints) {
   return client.getEntries(constraints)
     .then(function (response) {
-      console.log(response);
       return response.items;
     })
     .catch(console.error);

@@ -3,9 +3,7 @@ var api = require('../utils/api.js');
 var ReactMarkdown = require('react-markdown');
 
 function About (props) {
-  console.log(props);
   const page = props.about;
-  console.log(page);
   const pageBody = page.fields.body.split("\n");
 
   return (

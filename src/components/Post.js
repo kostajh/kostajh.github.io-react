@@ -26,13 +26,13 @@ function RenderPost (props) {
         </div>
         {postBody.map(function (paragraph, index) {
           if (index === 0) {
-            return (<p key={index} className="f5 lh-copy measure mt0-ns">
+            return (<div key={index} className="f5 lh-copy measure mt0-ns">
                     <ReactMarkdown source={paragraph} />
-                    </p>);
+                    </div>);
           }
-          return (<p key={index} className="f5 lh-copy measure">
+          return (<div key={index} className="f5 lh-copy measure">
                   <ReactMarkdown source={paragraph} />
-                  </p>);
+                  </div>);
         })}
       </div>
     </article>

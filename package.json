@@ -1,5 +1,6 @@
 {
-  "name": "kostajh-react",
+  "name": "kostaharlan.net",
+  "homepage": "http://www.kostaharlan.net",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -43,7 +44,8 @@
     "eslint-config-airbnb": "^14.1.0",
     "react-scripts": "0.9.5",
     "serve": "^5.1.5",
-    "tachyons-cli": "^1.0.11"
+    "tachyons-cli": "^1.0.11",
+    "webpack": "^2.5.1"
   },
   "scripts": {
     "start": "react-scripts start",
