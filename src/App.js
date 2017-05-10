@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Header from './components/Header.js';
-import Articles from './components/Articles.js';
-import Post from './components/Post.js';
-import AboutPage from './components/About.js';
+import Header from './components/Header';
+import Articles from './components/Articles';
+import Post from './components/Post';
+import AboutPage from './components/About';
 import {
   BrowserRouter as Router,
   Route,
