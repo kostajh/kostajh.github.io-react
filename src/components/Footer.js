@@ -21,7 +21,7 @@ const FooterProperties = {
 
 const Footer = () => (
   <footer className="pv4 ph3 ph5-m ph6-l mid-gray">
-    <small className="f6 db tc"><a className="dib ph2 link mid-gray dim" href={FooterProperties.email.url}>{FooterProperties.email.title}</a></small>
+    <small className="f6 db tc">Contact: <a className="dib ph2 link mid-gray dim" href={FooterProperties.email.url}>{FooterProperties.email.title}</a></small>
     <div className="tc mt3">
       <a href={FooterProperties.drupal.url} title={FooterProperties.drupal.title} className="f6 dib ph2 link mid-gray dim">{FooterProperties.drupal.title}</a>
       <a href={FooterProperties.github.url}  title={FooterProperties.github.title} className="f6 dib ph2 link mid-gray dim">{FooterProperties.github.title}</a>

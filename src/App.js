@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import Header from './components/Header.js';
-import Footer from './components/Footer.js';
 import Articles from './components/Articles.js';
 import Post from './components/Post.js';
-import About from './components/About.js';
+import AboutPage from './components/About.js';
 import {
   BrowserRouter as Router,
   Route,
@@ -18,13 +17,12 @@ class App extends Component {
           <Header />
           <Switch>
             <Route exact path='/' component={Articles} />
-            <Route exact path='/about' component={About} />
+            <Route exact path='/about' component={AboutPage} />
             <Route path='/post/:slug' component={Post} />
             <Route render={function () {
                      return <p>Not Found</p>
                    }} />
           </Switch>
-          <Footer />
         </div>
       </Router>
     );
